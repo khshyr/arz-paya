@@ -1,1 +1,46 @@
 @import './normalize.css';
+
+
+.bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.bar-ask {
+  background-color: #ffd5e0;
+
+}
+
+.bar-bid {
+  background-color: #d7e4fd;
+
+}
+
+.font-lg {
+  font-size: 36px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.orders {
+  overflow: auto;
+  .asks {
+    margin-top: 40px!important;
+  }
+}
+
+.asks,.bids{
+  max-height: calc(50vh - 30px)!important;
+  overflow: auto;
+}
+
+.h-60{
+  height: 60px;
+}
