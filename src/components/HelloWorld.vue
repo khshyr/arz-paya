@@ -6,7 +6,7 @@
       <div class="col-3">مقدار</div>
       <div class="col-3">ارزش</div>
     </div>
-    <div class="asks">
+    <div id="asks" class="asks">
       <div class="row position-relative m-1" v-for="(ask, index) in asks" :key="index">
         <div class="col-3 text-danger z-1">{{ ask.price }}</div>
         <div class="col-3 text-danger z-1">{{ ask.quantity }}</div>
@@ -49,21 +49,21 @@ export default {
       const response = await this.$http.axiosGet({url: 'depth?symbol=USDTTMN'})
       this.asks = response.data.result.ask
       this.bids = response.data.result.bid
-      console.log(this.asks)
+      this.scrollToBottom()
     },
     selectPrice(selected) {
       this.selected = selected.sum
     },
+    scrollToBottom() {
+      setTimeout(() => {
+        let asksContainer = document.getElementById("asks");
+        asksContainer.scrollTop = asksContainer.scrollHeight;
+      }, 0)
+    }
   }
 }
 </script>
 
 <style scoped>
-.bg-red {
-  background-color: #ffd5e0;
-}
 
-.bg-blue {
-  background-color: #d7e4fd;
-}
 </style>
