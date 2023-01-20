@@ -1,0 +1,56 @@
+@import './normalize.css';
+@font-face {
+  font-family: "iransans";
+  src: url("../../assets/fonts/iransans/woff2/IRANSansWeb.woff2"), url("../../assets/fonts/iransans/woff/IRANSansWeb.woff"), url("../../assets/fonts/iransans/ttf/IRANSansWeb.ttf"), url("../../assets/fonts/iransans/eot/IRANSansWeb.eot");
+}
+@font-face {
+  font-family: IranSansFaNum;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../assets/fonts/IRANSansDN/Farsi_numerals/IRANSansDN_Fa_Num.ttf");
+}
+@font-face {
+  font-family: iransansbold;
+  src: url("../../assets/fonts/iransans/woff2/IRANSansWeb_Bold.woff2");
+}
+#app {
+  direction: rtl;
+  font-family: IranSansFaNum;
+}
+
+.btn-primary {
+  background-color: #E22452 !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  background-color: #9c0e2e !important;
+}
+
+.phone-input {
+  border: none;
+  border-bottom: 1px solid #E1E1E1 !important;
+  outline: none !important;
+}
+
+.phone-input:focus {
+  border: none !important;
+  border-bottom: 2px solid #E22452 !important;
+}
+
+.phone-input:focus-visible {
+  border: none !important;
+  border-bottom: 2px solid #E22452 !important;
+}
+
+.form-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.policy-modal-btn {
+  color: #E22452;
+  cursor: pointer;
+}
